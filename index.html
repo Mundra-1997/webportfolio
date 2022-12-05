@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://kit.fontawesome.com/fb406fe7c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <!-- <img src="Images/darshan.jpg" alt="" class="image"> -->
+  <div id="home" class="container1">
+    
+        <div>
+        <h1 style="font-family: papyrus; letter-spacing: 2px; font-size: 50px;">Darshan Mundra</h1>
+    </div>
+    <div>
+    <nav>
+        <ul id="sidemenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#profiles">Profiles</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+</div>
+</div>
+<div class="container2">
+    <div class="header-text">
+        <p>Full Stack Developer</p>
+        <h1>Hi! I'am <span> Darshan</span></h1>
+    </div>
+    <!-- class="h4" style="margin-left: 50%;" -->
+    <div >  
+        <img class="imagemain" src="Images/darshan.jpg" alt="">
+    </div>
+   </div> 
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/IMG_20220302_184253.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+              <p class="about">Aspiring Full Stack Developer.8 months of experience in Government Banking Industry providing Digital Banking Support.A quick learner with excellent reasoning and quantitative aptitude knowledge.
+                Proficient in JAVA and Data Structures And Algorithms.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contains active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span><br>Data Structures And Algorithms</li>
+                        <li><span>Frontend</span><br>HTML,CSS,ReactJS</li>
+                        <li><span>Backend</span><br>NodeJS,ExpressJS</li>
+                    </ul>
+                </div>
+                <div class="tab-contains" id="experience">
+                    <ul>
+                        <li><span>November 2022 - Current</span><br>Social Media Manager at TOLFA</li>
+                        <li><span>July 2021 - March 2022</span><br>Junior Associate At SBI</li>
+                    </ul>
+                </div>
+                <div class="tab-contains" id="education">
+                    <ul>
+                        <li><span>2019</span><br>BTECH from GECA,Ajmer</li>
+                        <li><span>2015</span><br>XII from MPS,Ajmer</li>
+                        <li><span>2014</span><br>X from MPS,Ajmer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="certification">
+    <div class="container">
+        <h1 class="sub-title">Certification</h1>
+        <div class="certificate-link">
+            <div>
+            <h2>Full Stack Developer</h2>
+            <p>Newton School</p>
+             </div> 
+             <div>
+                <h2>Certified Software Development Trainee</h2>
+                <a href="https://www.myamcat.com/certificate/10004512/softwaredevelopment-trainee/166" target="_blank">Certificate</a>
+             </div>
+        </div>
+    </div>
+   </div>
+   <div id="profiles">
+    <div class="container">
+        <h1 class="sub-title">Profiles</h1>
+        <div class="profile-link">
+            <div>
+                <a href="https://github.com/Mundra-1997" target="_blank"><i class="fa-brands fa-github fa-3x"></i>
+                <h2>GitHub</h2></a>
+                
+            </div>
+            <div>
+                
+                <a href="https://leetcode.com/darshandm28/" target="_blank"><i class="fa-solid fa-code fa-3x"></i><h2>LeetCode</h2></a>
+            </div>
+            <div>
+              
+                <a href="https://www.linkedin.com/in/darshan-mundra-332a0320b" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i><h2>LinkedIn</h2></a>
+                
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="contact">
+    <div class="container3">
+        <!-- <div class="row"> -->
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="contact-left">
+              <div><p><i class="fa-solid fa-envelope"></i>darshandm28@gmail.com</p></div>
+              <div><p><i class="fa-solid fa-phone"></i>+91-8005875401</p></div>
+              <div><p><a href="Images/DarshanMundra.pdf" download class="cv"><i class="fa-solid fa-download"></i>Download CV</a></p></div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+  
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contains");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+   <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+   </script>
+</body>
+</html>
