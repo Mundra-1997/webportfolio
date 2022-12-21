@@ -56,25 +56,9 @@ body{
  .header-text{
     margin-top: 150px;
  }
- /* h4 {
 
-    margin-bottom: .2rem;
-    
-    margin-top:.5rem;
-    
-    margin-left:.2rem;
-    
-    margin-right: .2rem;
-    
-    font-weight: 500;
-    
-    line-height: 1.1;
-    
-    color: black;
-    
-    font-size: inherit;
-    
-    } */
+
+
 
 nav{
     display: flex;
