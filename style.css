@@ -171,6 +171,11 @@ nav ul li a:hover::after{
     color: lightslategrey;
     font-size: 14px;
 }
+.tab-contains ul li a {
+    text-decoration: none;
+    color: lightslategrey;
+    font-size: 14px;
+}
 .tab-contains{
     display: none;
 }
